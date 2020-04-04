@@ -13,7 +13,27 @@ contract  Casino {
     function addToBank() public payable{
         bank += msg.value;
     }
-    function didWin() internal
+    
+    struct possibleBet {
+    uint start;
+    uint end;
+    uint multiplier;
+    }
+    
+    mapping (string => possibleBet) possibleBets;
+    
+    function setInstructor(address _address, uint _age, string _fName, string _lName) public {
+        var instructor = instructors[_address];
+
+        instructor.age = _age;
+        instructor.fName = _fName;
+        instructor.lName = _lName;
+        
+        instructorAccts.push(_address) -1;
+
+    }
+    
+    function didWin(section, try, winner) internal
     {
     
     }
