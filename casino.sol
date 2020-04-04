@@ -13,6 +13,15 @@ contract  Casino {
     function addToBank() public payable{
         bank += msg.value;
     }
+    function didWin() internal
+    {
+    
+    }
+   
+    function multiplier() internal
+    {
+    
+    }
     
     function bet()
     {
