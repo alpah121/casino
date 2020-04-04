@@ -52,7 +52,14 @@ contract  Casino {
         return true;
         }
     //if all else fails check the possible bet array
-    else if ()
+    else if (possibleBets[section].multiplier != 0 && winner >= possibleBets[section].start && winner <= possibleBets[section].end)
+        {
+        return true;
+        }
+    else
+        {
+        return false;
+        }
     }
    
     function multiplier() internal
